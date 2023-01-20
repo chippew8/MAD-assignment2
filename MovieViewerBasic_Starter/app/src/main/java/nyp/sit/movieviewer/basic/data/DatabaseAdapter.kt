@@ -4,4 +4,5 @@ import android.content.Context
 
 class DatabaseAdapter(c: Context) {
 
+    private val DATABASE_NAME = "simplemovie.db"
 }

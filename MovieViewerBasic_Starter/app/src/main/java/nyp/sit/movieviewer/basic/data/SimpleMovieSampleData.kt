@@ -13,7 +13,7 @@ class SimpleMovieSampleData {
             populateSimpleMovieItem()
         }
 
-        private fun populateSimpleMovieItem(): ArrayList<SimpleMovieItem> {
+        fun populateSimpleMovieItem(): ArrayList<SimpleMovieItem> {
 
             simpleMovieitemArray.add(
                 SimpleMovieItem(
