@@ -13,19 +13,28 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MovieViewer"
         tools:targetApi="31">
-
+        <activity
+            android:name=".FavouriteList"
+            android:exported="true" />
+        <activity
+            android:name=".VerificationCode"
+            android:exported="true" />
+        <activity
+            android:name=".Register"
+            android:exported="true" />
+        <activity
+            android:name=".LoginScreen"
+            android:exported="true" />
         <activity
             android:name=".SimpleViewListOfMoviesActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".SimpleItemDetailActivity" >
-        </activity>
-
+        <activity android:name=".SimpleItemDetailActivity" />
     </application>
 
 </manifest>

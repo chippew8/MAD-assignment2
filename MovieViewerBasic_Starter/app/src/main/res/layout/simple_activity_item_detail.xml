@@ -15,8 +15,7 @@
             android:layout_height="match_parent"
             android:gravity="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-            tools:text="Frozen 2"
-            />
+            tools:text="Frozen 2" />
 
     </RelativeLayout>
 
