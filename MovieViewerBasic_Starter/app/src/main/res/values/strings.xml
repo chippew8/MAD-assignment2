@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Movie Viewer</string>
+    <string name="noitems">Empty</string>
 </resources>

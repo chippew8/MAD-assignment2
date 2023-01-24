@@ -5,6 +5,7 @@ import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.simple_activity_item_detail.*
+import nyp.sit.movieviewer.basic.data.MyMovies
 
 class SimpleItemDetailActivity : AppCompatActivity() {
 
@@ -29,6 +30,13 @@ class SimpleItemDetailActivity : AppCompatActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean{
+        if(item?.itemId == R.id.add_fav){
+            val mc = MyMovies.ourInstance
+
+            mc.addToDatabase(movie_title.text.toString(), movie_overview.text.toString(), movie_langauge.text.toString(), movie_release_date.text.toString(), applicationContext)
+
+            finish()
+        }
         return super.onOptionsItemSelected(item)
     }
 }
