@@ -7,6 +7,12 @@
     tools:context=".LoginActivity"
     android:orientation="vertical">
 
+    <pl.droidsonroids.gif.GifImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/welcome"
+        android:layout_gravity="center"/>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -14,7 +20,7 @@
         />
 
     <EditText
-
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:id="@+id/ET_main_login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -27,6 +33,7 @@
         />
 
     <EditText
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:inputType="textPassword"
         android:id="@+id/ET_main_password"
         android:layout_width="match_parent"
@@ -50,4 +57,5 @@
             android:layout_height="wrap_content"
             android:text="Register"/>
     </LinearLayout>
+
 </LinearLayout>
