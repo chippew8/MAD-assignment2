@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_login_screen.*
 
-class LoginScreen : AppCompatActivity() {
+class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login_screen)
@@ -23,8 +23,8 @@ class LoginScreen : AppCompatActivity() {
         }
 
         btnRegister.setOnClickListener{
-            val RegisterIntent = Intent(this, Register::class.java)
-            startActivity(RegisterIntent)
+            val RegisterActivityIntent = Intent(this, RegisterActivity::class.java)
+            startActivity(RegisterActivityIntent)
         }
     }
 

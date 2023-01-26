@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<group
+    android:id="@+id/main_group">
+    <item
+        android:id="@+id/fav"
+        android:title="View Favourites"/>
+    <item
+        android:id="@+id/sign_out"
+        android:title="Sign Out"/>
+</group>
+</menu>

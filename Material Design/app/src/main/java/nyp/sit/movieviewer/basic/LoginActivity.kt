@@ -5,26 +5,32 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_login_screen.*
-import kotlinx.android.synthetic.main.activity_verification_code.*
 
-class VerificationCode : AppCompatActivity() {
+class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_verification_code)
+        setContentView(R.layout.activity_login_screen)
 
-        btnVerify.setOnClickListener{
-            if(ET_verify.text.toString() == "1234"){
+        btnLogin.setOnClickListener{
+            if(ET_main_login.text.toString() == "testuser" && ET_main_password.text.toString() == "testuser"){
                 val loginIntent = Intent(this, SimpleViewListOfMoviesActivity::class.java)
                 startActivity(loginIntent)
             }else{
-                displayToast("Code Error")
+                ET_main_login.setError("Invalid Username")
+                ET_main_password.setError("Invalid Password")
+                displayToast("Login Error")
             }
         }
 
+        btnRegister.setOnClickListener{
+            val RegisterActivityIntent = Intent(this, RegisterActivity::class.java)
+            startActivity(RegisterActivityIntent)
+        }
     }
 
     fun displayToast(message:String){
         Toast.makeText(this, message, Toast.LENGTH_LONG).show()
     }
+
 
 }

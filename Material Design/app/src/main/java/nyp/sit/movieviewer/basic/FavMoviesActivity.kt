@@ -9,7 +9,7 @@ import android.widget.ArrayAdapter
 import kotlinx.android.synthetic.main.activity_favourite_list.*
 import nyp.sit.movieviewer.basic.data.MyMovies
 
-class FavouriteList : AppCompatActivity() {
+class FavMoviesActivity : AppCompatActivity() {
     var moviesAdapter: ArrayAdapter<String>? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
