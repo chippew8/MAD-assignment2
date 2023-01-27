@@ -13,6 +13,7 @@ class SimpleItemDetailActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.simple_activity_item_detail)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         var MovieTitle = intent.getStringExtra("title")
         var MovieOverview = intent.getStringExtra("overview")
@@ -71,5 +72,10 @@ class SimpleItemDetailActivity : AppCompatActivity() {
 
     fun displayToast(message:String){
         Toast.makeText(this, message, Toast.LENGTH_LONG).show()
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
     }
 }
