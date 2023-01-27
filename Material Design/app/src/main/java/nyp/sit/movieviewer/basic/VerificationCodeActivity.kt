@@ -11,6 +11,7 @@ class VerificationCodeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_verification_code)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         btnVerify.setOnClickListener{
             if(ET_verify.text.toString() == "1234"){
@@ -25,6 +26,11 @@ class VerificationCodeActivity : AppCompatActivity() {
 
     fun displayToast(message:String){
         Toast.makeText(this, message, Toast.LENGTH_LONG).show()
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
     }
 
 }

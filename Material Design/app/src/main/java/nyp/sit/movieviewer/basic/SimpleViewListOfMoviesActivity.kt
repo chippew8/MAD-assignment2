@@ -96,5 +96,6 @@ class SimpleViewListOfMoviesActivity : AppCompatActivity() {
             return v
         }
     }
+
 }
 
