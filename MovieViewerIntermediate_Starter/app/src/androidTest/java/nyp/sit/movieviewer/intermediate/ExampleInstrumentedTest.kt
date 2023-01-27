@@ -86,7 +86,7 @@ class ExampleInstrumentedTest {
         assertEquals("Aquaman",listitems!!.get(0).title)
         assertEquals(549.381,listitems!!.get(0).popularity,0.0)
         assertEquals("/5Kg76ldv7VxeX9YlcQXiowHgdX6.jpg",listitems!!.get(0).poster_path)
-        assertEquals("en",listitems!!.get(0).original_langauge)
+        assertEquals("en",listitems!!.get(0).original_language)
         assertEquals("Aquaman",listitems!!.get(0).original_title)
         assertEquals("[28,14,878,12]",listitems!!.get(0).genre_ids)
         assertEquals("/5A2bMlLfJrAfX9bqAibOL2gCruF.jpg",listitems!!.get(0).backdrop_path)

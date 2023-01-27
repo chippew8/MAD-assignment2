@@ -2,5 +2,5 @@
     <string name="app_name">Movie Viewer</string>
     <string name="menu_sort_popular">Sort by Popularity</string>
     <string name="menu_sort_top_rated">Sort by Ratings</string>
-    <string name="moviedb_api_key">XXX</string>
+    <string name="moviedb_api_key">90692aa32d311205476229d3a936b8ed</string>
 </resources>
