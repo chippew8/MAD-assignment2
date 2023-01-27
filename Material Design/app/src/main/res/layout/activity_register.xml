@@ -31,7 +31,8 @@
         android:id="@+id/ET_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter password here"/>
+        android:hint="Enter password here"
+        android:inputType="textPassword"/>
 
     <TextView
         android:layout_width="wrap_content"

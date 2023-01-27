@@ -15,8 +15,11 @@ class VerificationCodeActivity : AppCompatActivity() {
 
         btnVerify.setOnClickListener{
             if(ET_verify.text.toString() == "1234"){
-                val loginIntent = Intent(this, SimpleViewListOfMoviesActivity::class.java)
+                displayToast("Code verified")
+                val loginIntent = Intent(this, LoginActivity::class.java)
                 startActivity(loginIntent)
+            }else if (ET_verify.text.toString() == ""){
+                displayToast("Code cannot be empty")
             }else{
                 displayToast("Code Error")
             }
