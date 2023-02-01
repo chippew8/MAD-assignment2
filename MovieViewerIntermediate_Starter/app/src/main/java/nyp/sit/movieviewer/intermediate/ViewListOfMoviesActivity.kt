@@ -1,12 +1,18 @@
 package nyp.sit.movieviewer.intermediate
 
 import android.os.Bundle
+import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.async
 
 class ViewListOfMoviesActivity : AppCompatActivity() {
-
+    val moviedb_api_key = getString(R.string.moviedb_api_key)
     val SHOW_BY_TOP_RATED = 1
     val SHOW_BY_POPULAR = 2
 
@@ -49,6 +55,21 @@ class ViewListOfMoviesActivity : AppCompatActivity() {
             }
         }
         return super.onOptionsItemSelected(item)
+    }
+
+    override fun onResume(){
+        super.onResume()
+
+        val scope = CoroutineScope(Job() + Dispatchers.IO)
+
+        var nwSingleItemJob = scope.async(){
+            var nwURL = NetworkUtils.buildUrl("String", moviedb_api_key)
+
+            var response = nwURL?.let { NetworkUtils.getResponseFromHttpUrl(it) }
+
+            response
+        }
+
     }
 
 }
