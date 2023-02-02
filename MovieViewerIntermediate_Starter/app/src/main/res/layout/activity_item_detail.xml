@@ -18,7 +18,6 @@
             android:fitsSystemWindows="true"
             android:scaleType="centerInside"
             tools:src="@drawable/defaultimage" />
-
     </RelativeLayout>
 
     <ScrollView

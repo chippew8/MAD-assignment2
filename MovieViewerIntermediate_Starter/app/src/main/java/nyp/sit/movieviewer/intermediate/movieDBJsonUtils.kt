@@ -22,18 +22,18 @@ class movieDBJsonUtils() {
 
             for (i in 0 until jsonArray.length()) {
 
-                val vote_count = jsonArray.getJSONObject(i).getString("vote_count").toInt()
-                val id = jsonArray.getJSONObject(i).getString("id").toInt()
-                val video = jsonArray.getJSONObject(i).getString("video").toBoolean()
-                val vote_average = jsonArray.getJSONObject(i).getString("vote_average").toDouble()
+                val vote_count = jsonArray.getJSONObject(i).getInt("vote_count")
+                val id = jsonArray.getJSONObject(i).getInt("id")
+                val video = jsonArray.getJSONObject(i).getBoolean("video")
+                val vote_average = jsonArray.getJSONObject(i).getDouble("vote_average")
                 val title = jsonArray.getJSONObject(i).getString("title")
-                val popularity = jsonArray.getJSONObject(i).getString("popularity").toDouble()
+                val popularity = jsonArray.getJSONObject(i).getDouble("popularity")
                 val poster_path = jsonArray.getJSONObject(i).getString("poster_path")
                 val original_language = jsonArray.getJSONObject(i).getString("original_language")
                 val original_title = jsonArray.getJSONObject(i).getString("original_title")
                 val genre_ids = jsonArray.getJSONObject(i).getString("genre_ids")
                 val backdrop_path = jsonArray.getJSONObject(i).getString("backdrop_path")
-                val adult = jsonArray.getJSONObject(i).getString("adult").toBoolean()
+                val adult = jsonArray.getJSONObject(i).getBoolean("adult")
                 val overview = jsonArray.getJSONObject(i).getString("overview")
                 val release_date = jsonArray.getJSONObject(i).getString("release_date")
 

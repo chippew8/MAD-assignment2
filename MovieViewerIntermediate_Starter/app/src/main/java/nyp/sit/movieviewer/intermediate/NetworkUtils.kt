@@ -60,6 +60,26 @@ class NetworkUtils{
             return url
         }
 
+        fun popularURL(queryType: String, apikey: String?): URL? {
+            var url: URL? = null
+            if (apikey == null) {
+                return url
+            }
+
+            val builtUri = Uri.parse(MOVIE_DB_BASE_URL).buildUpon()
+                .appendEncodedPath(queryType)
+                .appendQueryParameter(API_KEY_PARAM, apikey)
+                .build()
+
+            try {
+                url = URL(builtUri.toString())
+            } catch (e: MalformedURLException) {
+                e.printStackTrace()
+            }
+            Log.v(TAG, "Built URI " + url!!)
+            return url
+        }
+
         @Throws(IOException::class)
         fun getResponseFromHttpUrl(url: URL): String? {
             val urlConnection = url.openConnection() as HttpURLConnection

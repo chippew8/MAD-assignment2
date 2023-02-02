@@ -1,6 +1,10 @@
 package nyp.sit.movieviewer.intermediate.entity
 
+import androidx.room.ColumnInfo
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 
+@Entity(tableName = "movies_table")
 class MovieItem(
     poster_path: String?, adult: Boolean?, overview: String?,
     release_date: String?, genre_ids: String?, id: Int = 0,
@@ -9,33 +13,33 @@ class MovieItem(
     vote_count: Int = 0, video: Boolean?, vote_average: Double = 0.0
 ) {
 
-    var id: Int = 0
+    @PrimaryKey(autoGenerate = true) @ColumnInfo(name = "id") var id: Int = 0
 
-    var poster_path: String? = null
+    @ColumnInfo(name = "poster_path") var poster_path: String? = null
 
-    var adult: Boolean? = null
+    @ColumnInfo(name = "adult") var adult: Boolean? = null
 
-    var overview: String? = null
+    @ColumnInfo(name = "overview") var overview: String? = null
 
-    var release_date: String? = null
+    @ColumnInfo(name = "release_date") var release_date: String? = null
 
-    var genre_ids: String? = null
+    @ColumnInfo(name = "genre_ids") var genre_ids: String? = null
 
-    var original_title: String? = null
+    @ColumnInfo(name = "original_title") var original_title: String? = null
 
-    var original_language: String? = null
+    @ColumnInfo(name = "original_language") var original_language: String? = null
 
-    var title: String? = null
+    @ColumnInfo(name = "title") var title: String? = null
 
-    var backdrop_path: String? = null
+    @ColumnInfo(name = "backdrop_path") var backdrop_path: String? = null
 
-    var popularity: Double = 0.0
+    @ColumnInfo(name = "popularity") var popularity: Double = 0.0
 
-    var vote_count: Int = 0
+    @ColumnInfo(name = "vote_count") var vote_count: Int = 0
 
-    var video: Boolean? = null
+    @ColumnInfo(name = "video") var video: Boolean? = null
 
-    var vote_average: Double = 0.0
+    @ColumnInfo(name = "vote_average") var vote_average: Double = 0.0
 
     init {
         this.poster_path = poster_path
