@@ -154,12 +154,12 @@
                         android:text="Langauge:"/>
 
                 <TextView
-                        android:id="@+id/movie_langauge"
+                        android:id="@+id/movie_language"
                         android:layout_weight="0.5"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:paddingBottom="20dp"
-                        android:text="langauge"/>
+                        android:text="language"/>
             </LinearLayout>
 
             <LinearLayout
