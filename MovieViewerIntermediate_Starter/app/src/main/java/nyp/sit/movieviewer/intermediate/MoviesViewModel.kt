@@ -29,6 +29,9 @@ class MoviesViewModel(val repo: MoviesRepository) : ViewModel() {
         repo.delete(movieItem)
     }
 
+    fun dropDB() = viewModelScope.launch(Dispatchers.IO){
+        repo.dropDB()
+    }
 
 }
 

@@ -29,7 +29,24 @@ class ViewListOfMoviesActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_view_list_of_movies)
 
+        var myIntent = Intent(this, ItemDetailActivity::class.java)
         loadMovieData(displayType)
+
+        movielist.onItemClickListener= object: AdapterView.OnItemClickListener {
+            override fun onItemClick(parent: AdapterView<*>?, view: View?, position:Int, id:Long){
+
+                myIntent.putExtra("poster_path", allMovies?.get(position)?.poster_path)
+                myIntent.putExtra("overview", allMovies?.get(position)?.overview)
+                myIntent.putExtra("release_date", allMovies?.get(position)?.release_date)
+                myIntent.putExtra("popularity", allMovies?.get(position)?.popularity.toString())
+                myIntent.putExtra("vote_count", allMovies?.get(position)?.vote_count.toString())
+                myIntent.putExtra("vote_average", allMovies?.get(position)?.vote_average.toString())
+                myIntent.putExtra("original_language", allMovies?.get(position)?.original_language)
+                myIntent.putExtra("adult", allMovies?.get(position)?.adult.toString())
+                myIntent.putExtra("video", allMovies?.get(position)?.video.toString())
+                startActivity(myIntent)
+            }
+        }
     }
     override fun onContextItemSelected(item: MenuItem): Boolean {
 
@@ -66,6 +83,8 @@ class ViewListOfMoviesActivity : AppCompatActivity() {
     }
 
     fun loadMovieData(viewType: Int) {
+
+        moviesViewModel.dropDB()
         var showTypeStr: String? = null
         when (viewType) {
             SHOW_BY_TOP_RATED -> showTypeStr = NetworkUtils.TOP_RATED_PARAM

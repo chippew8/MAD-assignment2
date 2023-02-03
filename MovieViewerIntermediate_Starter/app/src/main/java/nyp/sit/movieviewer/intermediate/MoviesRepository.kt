@@ -16,4 +16,8 @@ class MoviesRepository(private val MoviesDao: MoviesDao) {
         MoviesDao.delete(movie)
     }
 
+    suspend fun dropDB(){
+        MoviesDao.dropDB()
+    }
+
 }

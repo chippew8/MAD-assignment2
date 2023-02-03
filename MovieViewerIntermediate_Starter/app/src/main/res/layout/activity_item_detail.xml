@@ -86,7 +86,7 @@
                     android:layout_weight="0.5"
                     android:paddingRight="5dp"
                     android:paddingBottom="20dp"
-                    android:text="Populartity:" />
+                    android:text="Popularity:" />
 
                 <TextView
                     android:id="@+id/movie_popularity"
